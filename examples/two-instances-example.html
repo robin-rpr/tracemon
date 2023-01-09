@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Two Instances Example</title>
+  </head>
+  <body>
+    <script>
+      /* Define before index.js import */
+      TRACEMON_EXTERNAL_WIDGET_URL =
+        window.location.protocol + "//" + window.location.host + "/dist/";
+    </script>
+    <script src="../dist/index.js"></script>
+    <div id="one" style="width: 90%; margin: auto"></div>
+    <div id="two" style="width: 90%; margin: auto"></div>
+    <script>
+      var tracemonOne = initTracemon(
+        "#one",
+        {
+          autoStart: true,
+          autoStartGrouping: true,
+          dev: false,
+        },
+        {
+          measurements: [48657256],
+        }
+      );
+
+      var tracemonTwo = initTracemon(
+        "#two",
+        {
+          autoStart: true,
+          autoStartGrouping: true,
+          dev: true,
+        },
+        {
+          measurements: [48656032],
+        }
+      );
+    </script>
+  </body>
+</html>

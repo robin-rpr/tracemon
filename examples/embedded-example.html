@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Embedded Example</title>
+  </head>
+  <body>
+    <script>
+      /* Define before index.js import */
+      TRACEMON_EXTERNAL_WIDGET_URL =
+        window.location.protocol + "//" + window.location.host + "/dist/";
+    </script>
+    <script src="../dist/index.js"></script>
+    <div id="tracemon"></div>
+    <script>
+      initTracemon(
+        "#tracemon",
+        { dev: false }, // Tool options, see table below for more info
+        { measurements: [48657256, 48656032] } // Query options, see table below for more info
+      );
+    </script>
+  </body>
+</html>
