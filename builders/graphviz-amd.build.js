@@ -1,5 +1,5 @@
 ({
-    baseUrl : ".",
+    baseUrl : "..",
     findNestedDependencies: true,
     preserveLicenseComments: false,
 
@@ -20,6 +20,6 @@
     optimize: "none",
     wrapShim: false,
     generateSourceMaps: false,
-    out: "dev/libs/graphviz-amd.js"
+    out: "../.tmp/libs/graphviz-amd.js"
 
 })
